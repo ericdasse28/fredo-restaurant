@@ -5,6 +5,17 @@ from fredo_restaurant.dish import PastaType, Salsa, Topping
 from fredo_restaurant.order import Order
 
 
+def make_test_order(order_content):
+    order = Order(
+        order_content=order_content,
+        location="The place over there!",
+        comment="Some blabla",
+        customer_name="Veronica",
+    )
+
+    return order
+
+
 @pytest.fixture
 def penne_carbonara_order():
     penne_order_content = {
